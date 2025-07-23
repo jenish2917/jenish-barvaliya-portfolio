@@ -1,0 +1,96 @@
+# Python cache and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+*.sqlite3
+*.db
+
+# Jupyter and notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment and config
+.env
+config.env
+config/
+
+# Output and generated media
+output/
+premium_reels/
+human_reels/
+snapchat_reels/
+advanced_reels/
+assets/avatars/
+assets/backgrounds/
+assets/overlays/
+
+# Test and temp files
+test_output/
+temp_frames/
+
+# Backup and cleanup folders
+cleanup_backup_*/
+
+# Build and dist
+build/
+dist/
+
+# Misc
+*.bak
+*.tmp
+*.swp
+
+# Reports and markdown summaries
+*.md
+!README.md
+
+# Ignore all session folders
+output/sessions/
+
+# Ignore all video and audio files
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+*.webm
+*.mov
+*.avi
+*.wmv
+*.mkv
+
+# Ignore all images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.ico
+
+# Ignore all test scripts
+*test*.py
+
+# Ignore all demo scripts
+*demo*.py
+
+# Ignore all solution and summary scripts
+*solution*.py
+*summary*.py
+
+# Ignore all notebook files
+*.ipynb
