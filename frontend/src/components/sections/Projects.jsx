@@ -61,10 +61,10 @@ const Projects = ({ darkMode }) => {
             >
               Portfolio
             </motion.span>
-            <h2 className={`text-4xl md:text-5xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-6`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 sm:mb-6`}>
               Featured Projects
             </h2>
-            <p className={`text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto mb-6`}>
+            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto mb-4 sm:mb-6 px-6 text-center leading-relaxed`}>
               A collection of my most impactful projects showcasing expertise in AI/ML, web development, and data science.
             </p>
             <div className={`w-20 h-1 ${darkMode ? 'bg-white' : 'bg-black'} mx-auto`} />

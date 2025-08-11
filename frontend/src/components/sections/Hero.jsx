@@ -35,7 +35,7 @@ const Hero = ({ darkMode }) => {
     }
   }
 
-  const typewriterText = "Professional Machine Learning & AI Engineer"
+  const typewriterText = "AI/ML Engineer & Developer"
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-0">
@@ -100,9 +100,9 @@ const Hero = ({ darkMode }) => {
             className="h-16 sm:h-20 flex items-center justify-center"
           >
             <motion.h2
-              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl ${
+              className={`text-base sm:text-lg md:text-xl lg:text-2xl ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
-              } font-mono max-w-5xl font-medium px-4 text-center`}
+              } font-mono max-w-full font-medium px-4 text-center leading-tight`}
             >
               <motion.span
                 initial={{ width: 0 }}
@@ -125,18 +125,19 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced subtitle */}
           <motion.p
             variants={itemVariants}
-            className={`text-base sm:text-lg md:text-xl ${
+            className={`text-sm sm:text-base md:text-lg ${
               darkMode ? 'text-gray-400' : 'text-gray-500'
-            } max-w-4xl mx-auto leading-relaxed font-light px-4`}
+            } max-w-3xl mx-auto leading-relaxed font-light px-6 text-center`}
           >
             Passionate Information Technology student specializing in{' '}
             <span className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
               Machine Learning
-            </span>, {' '}
+            </span>
+            {', '}
             <span className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
               Artificial Intelligence
-            </span>, 
-            and modern web technologies. Building innovative solutions that bridge the gap between AI research and real-world applications.
+            </span>
+            {', and modern web technologies. Building innovative solutions that bridge the gap between AI research and real-world applications.'}
           </motion.p>
 
           {/* Enhanced action buttons */}

@@ -51,7 +51,7 @@ const Experience = ({ darkMode }) => {
             >
               Professional Journey
             </motion.span>
-            <h2 className={`text-4xl md:text-5xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-6`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 sm:mb-6`}>
               Experience
             </h2>
             <div className={`w-20 h-1 ${darkMode ? 'bg-white' : 'bg-black'} mx-auto`} />

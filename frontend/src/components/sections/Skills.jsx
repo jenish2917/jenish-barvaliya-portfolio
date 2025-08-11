@@ -79,7 +79,7 @@ const Skills = ({ darkMode }) => {
             <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 sm:mb-6`}>
               Skills & Technologies
             </h2>
-            <p className={`text-base sm:text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto mb-4 sm:mb-6 px-4`}>
+            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto mb-4 sm:mb-6 px-6 text-center leading-relaxed`}>
               A comprehensive overview of my technical skills across various domains including AI/ML, web development, and data science.
             </p>
             <div className={`w-20 h-1 ${darkMode ? 'bg-white' : 'bg-black'} mx-auto`} />

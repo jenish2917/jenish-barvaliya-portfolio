@@ -81,7 +81,7 @@ const About = ({ darkMode }) => {
                 />
               </span>
             </h2>
-            <p className={`text-base sm:text-lg md:text-xl ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed px-4`}>
+            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed px-6 text-center`}>
               Passionate developer crafting intelligent solutions at the intersection of AI and technology
             </p>
           </motion.div>
