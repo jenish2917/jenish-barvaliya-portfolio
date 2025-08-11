@@ -180,55 +180,7 @@ const Education = ({ darkMode }) => {
             </div>
           </div>
 
-          {/* Additional Education Stats */}
-          <motion.div
-            variants={itemVariants}
-            className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 p-6 rounded-xl ${
-              darkMode ? 'bg-white/5 border border-gray-700' : 'bg-black/5 border border-gray-200'
-            } backdrop-blur-sm`}
-          >
-            <div className="text-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={inView ? { scale: 1 } : { scale: 0 }}
-                transition={{ delay: 1.5, duration: 0.5 }}
-                className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-2`}
-              >
-                {new Date().getFullYear() - 2022}+
-              </motion.div>
-              <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                Years of Study
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={inView ? { scale: 1 } : { scale: 0 }}
-                transition={{ delay: 1.7, duration: 0.5 }}
-                className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-2`}
-              >
-                8.7
-              </motion.div>
-              <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                Current GPA
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={inView ? { scale: 1 } : { scale: 0 }}
-                transition={{ delay: 1.9, duration: 0.5 }}
-                className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-2`}
-              >
-                IT
-              </motion.div>
-              <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                Specialization
-              </div>
-            </div>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>
