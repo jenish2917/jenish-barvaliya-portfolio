@@ -38,14 +38,14 @@ const Hero = ({ darkMode }) => {
   const typewriterText = "Professional Machine Learning & AI Engineer"
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
       {/* Simplified background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/[0.005] to-transparent" />
       </div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10">
+      <div className="max-w-6xl mx-auto text-center relative z-10 w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -69,7 +69,7 @@ const Hero = ({ darkMode }) => {
           {/* Name with enhanced typography */}
           <motion.h1
             variants={itemVariants}
-            className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black ${
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black ${
               darkMode ? 'text-white' : 'text-black'
             } tracking-tight leading-none`}
           >
@@ -125,9 +125,9 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced subtitle */}
           <motion.p
             variants={itemVariants}
-            className={`text-lg sm:text-xl md:text-2xl ${
+            className={`text-base sm:text-lg md:text-xl ${
               darkMode ? 'text-gray-400' : 'text-gray-500'
-            } max-w-4xl mx-auto leading-relaxed font-light`}
+            } max-w-4xl mx-auto leading-relaxed font-light px-4`}
           >
             Passionate Information Technology student specializing in{' '}
             <span className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
@@ -142,7 +142,7 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced action buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-12"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 sm:pt-12 px-4"
           >
             <motion.a
               whileHover={{ 
@@ -152,7 +152,7 @@ const Hero = ({ darkMode }) => {
               whileTap={{ scale: 0.95 }}
               href={personalInfo.resume}
               download
-              className={`group relative inline-flex items-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 overflow-hidden ${
+              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center ${
                 darkMode 
                   ? 'bg-white text-black hover:bg-gray-100' 
                   : 'bg-black text-white hover:bg-gray-900'
@@ -161,7 +161,7 @@ const Hero = ({ darkMode }) => {
               {/* Button shine effect */}
               <div className="absolute inset-0 -top-1 -left-1 bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               
-              <Download size={20} className="mr-3 transition-transform group-hover:scale-110" />
+              <Download size={18} className="mr-2 sm:mr-3 transition-transform group-hover:scale-110" />
               Download Resume
             </motion.a>
 
@@ -172,13 +172,13 @@ const Hero = ({ darkMode }) => {
               }}
               whileTap={{ scale: 0.95 }}
               href={`mailto:${personalInfo.email}`}
-              className={`group inline-flex items-center px-8 py-4 rounded-2xl font-semibold text-lg border-2 transition-all duration-300 backdrop-blur-sm ${
+              className={`group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center ${
                 darkMode 
                   ? 'border-gray-500 text-white hover:border-white hover:bg-white/5 hover:shadow-glow-md' 
                   : 'border-gray-400 text-black hover:border-black hover:bg-black/5'
               }`}
             >
-              <Mail size={20} className="mr-3 transition-transform group-hover:scale-110" />
+              <Mail size={18} className="mr-2 sm:mr-3 transition-transform group-hover:scale-110" />
               Contact Me
             </motion.a>
           </motion.div>

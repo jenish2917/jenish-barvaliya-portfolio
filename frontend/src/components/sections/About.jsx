@@ -50,14 +50,14 @@ const About = ({ darkMode }) => {
   ]
 
   return (
-    <section id="about" className="py-24 relative pt-28">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="about" className="py-16 sm:py-24 relative pt-20 sm:pt-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="space-y-20"
+          className="space-y-12 sm:space-y-20"
         >
           {/* Enhanced Section Header */}
           <motion.div variants={itemVariants} className="text-center">
@@ -69,7 +69,7 @@ const About = ({ darkMode }) => {
               <User size={16} />
               About Me
             </motion.span>
-            <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-6`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 sm:mb-6`}>
               Who I{' '}
               <span className="relative">
                 Am
@@ -81,20 +81,20 @@ const About = ({ darkMode }) => {
                 />
               </span>
             </h2>
-            <p className={`text-lg sm:text-xl ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed`}>
+            <p className={`text-base sm:text-lg md:text-xl ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed px-4`}>
               Passionate developer crafting intelligent solutions at the intersection of AI and technology
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Enhanced Profile Section */}
-            <motion.div variants={itemVariants} className="space-y-10">
+            <motion.div variants={itemVariants} className="space-y-8 lg:space-y-10 order-2 lg:order-1">
               <div className="relative">
                 {/* Enhanced Profile Image */}
                 <motion.div
                   whileHover={{ scale: 1.02, rotateY: 5 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative w-72 h-96 mx-auto rounded-3xl ${
+                  className={`relative w-60 h-80 sm:w-72 sm:h-96 mx-auto rounded-3xl ${
                     darkMode ? 'bg-gradient-to-br from-gray-800 via-gray-900 to-black' : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300'
                   } flex items-center justify-center shadow-2xl border border-white/10 backdrop-blur-sm overflow-hidden`}
                 >
@@ -158,7 +158,7 @@ const About = ({ darkMode }) => {
               </div>
 
               {/* Enhanced Skills Grid */}
-              <motion.div variants={cardVariants} className="grid grid-cols-2 gap-4">
+              <motion.div variants={cardVariants} className="grid grid-cols-2 gap-3 sm:gap-4">
                 {[
                   { icon: Target, label: "Problem Solver", value: "100%" },
                   { icon: Zap, label: "Fast Learner", value: "95%" },
@@ -171,10 +171,10 @@ const About = ({ darkMode }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 1 + index * 0.1, duration: 0.6 }}
-                    className={`p-5 rounded-2xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group`}
+                    className={`p-3 sm:p-5 rounded-2xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group`}
                   >
-                    <skill.icon size={24} className={`${darkMode ? 'text-white' : 'text-black'} mb-3 group-hover:scale-110 transition-transform`} />
-                    <h4 className={`text-sm font-semibold ${darkMode ? 'text-white' : 'text-black'} mb-1`}>
+                    <skill.icon size={20} className={`sm:size-24 ${darkMode ? 'text-white' : 'text-black'} mb-2 sm:mb-3 group-hover:scale-110 transition-transform`} />
+                    <h4 className={`text-xs sm:text-sm font-semibold ${darkMode ? 'text-white' : 'text-black'} mb-1`}>
                       {skill.label}
                     </h4>
                     <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -186,17 +186,17 @@ const About = ({ darkMode }) => {
             </motion.div>
 
             {/* Enhanced Content Section */}
-            <motion.div variants={itemVariants} className="space-y-8">
+            <motion.div variants={itemVariants} className="space-y-6 sm:space-y-8 order-1 lg:order-2">
               {/* Enhanced Summary */}
               <motion.div
                 variants={cardVariants}
-                className={`p-8 rounded-3xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10`}
+                className={`p-6 sm:p-8 rounded-3xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10`}
               >
-                <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 flex items-center gap-3`}>
-                  <User className={darkMode ? "text-white" : "text-black"} size={28} />
+                <h3 className={`text-xl sm:text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3`}>
+                  <User className={darkMode ? "text-white" : "text-black"} size={24} />
                   My Story
                 </h3>
-                <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-6`}>
+                <p className={`text-sm sm:text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4 sm:mb-6`}>
                   {about.summary}
                 </p>
                 <motion.div

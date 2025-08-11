@@ -43,7 +43,7 @@ const Projects = ({ darkMode }) => {
   }
 
   return (
-    <section id="projects" className="py-20 relative pt-28">
+    <section id="projects" className="py-16 sm:py-20 relative pt-20 sm:pt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -73,7 +73,7 @@ const Projects = ({ darkMode }) => {
           {/* Projects Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {Array.isArray(projects) && projects.length > 0 ? (
               projects.map((project, index) => (
@@ -87,7 +87,7 @@ const Projects = ({ darkMode }) => {
                 onClick={() => setSelectedProject(project)}
               >
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 sm:h-48 overflow-hidden">
                   <div className={`w-full h-full ${
                     darkMode ? 'bg-gradient-to-br from-gray-800 to-gray-900' : 'bg-gradient-to-br from-gray-100 to-gray-200'
                   } flex items-center justify-center`}>

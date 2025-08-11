@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://inquisitive-faun-177f5c.netlify.app/sitemap.xml
+
 Sitemap: https://your-domain.com/sitemap.xml
