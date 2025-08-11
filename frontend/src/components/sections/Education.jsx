@@ -118,13 +118,6 @@ const Education = ({ darkMode }) => {
                           <span>{edu.location}</span>
                         </div>
                       </div>
-
-                      {/* GPA */}
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
-                        darkMode ? 'bg-white/20 text-white' : 'bg-black/20 text-black'
-                      }`}>
-                        GPA: {edu.gpa}
-                      </div>
                     </div>
 
                     {/* Description */}

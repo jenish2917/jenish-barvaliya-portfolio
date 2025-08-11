@@ -181,45 +181,6 @@ const Certifications = ({ darkMode }) => {
             )}
           </motion.div>
 
-          {/* Stats Section */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
-          >
-            {[
-              { number: Array.isArray(certifications) ? certifications.length : 0, label: "Certifications Earned", icon: Award },
-              { number: "4", label: "Top Tech Companies", icon: Building2 },
-              { number: "100%", label: "Verification Rate", icon: Shield }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className={`text-center p-6 rounded-xl ${
-                  darkMode ? 'bg-white/5 border border-gray-700' : 'bg-black/5 border border-gray-200'
-                } backdrop-blur-sm`}
-              >
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
-                  className={`mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
-                >
-                  <stat.icon className="w-12 h-12 mx-auto" />
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={inView ? { scale: 1 } : { scale: 0 }}
-                  transition={{ delay: 1 + index * 0.2, duration: 0.8 }}
-                  className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-2`}
-                >
-                  {stat.number}
-                </motion.div>
-                <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} font-medium`}>
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}

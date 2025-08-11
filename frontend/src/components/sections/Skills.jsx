@@ -177,7 +177,7 @@ const Skills = ({ darkMode }) => {
               Currently learning PyTorch for deep learning and LangChain for AI applications.
             </p>
             
-            {/* Current Learning */}
+            {/* Current Learning - Updated to show only PyTorch and LangChain */}
             <div className="flex flex-wrap justify-center gap-3">
               {['PyTorch', 'LangChain'].map((tech, index) => (
                 <motion.span
