@@ -143,7 +143,7 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced action buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col gap-3 sm:flex-row sm:gap-6 justify-center items-center pt-6 sm:pt-12 px-4 max-w-md sm:max-w-none mx-auto"
+            className="flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center items-center pt-6 sm:pt-12 px-4 max-w-sm sm:max-w-none mx-auto"
           >
             <motion.a
               whileHover={{ 
@@ -153,10 +153,11 @@ const Hero = ({ darkMode }) => {
               whileTap={{ scale: 0.95 }}
               href={personalInfo.resume}
               download
-              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center ${
+              aria-label="Download resume PDF"
+              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 darkMode 
-                  ? 'bg-white text-black hover:bg-gray-100' 
-                  : 'bg-black text-white hover:bg-gray-900'
+                  ? 'bg-white text-black hover:bg-gray-100 focus:ring-white focus:ring-offset-black' 
+                  : 'bg-black text-white hover:bg-gray-900 focus:ring-black focus:ring-offset-white'
               } shadow-lg hover:shadow-xl`}
             >
               {/* Button shine effect */}
@@ -173,10 +174,11 @@ const Hero = ({ darkMode }) => {
               }}
               whileTap={{ scale: 0.95 }}
               href={`mailto:${personalInfo.email}`}
-              className={`group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center ${
+              aria-label="Send email to contact"
+              className={`group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 darkMode 
-                  ? 'border-gray-500 text-white hover:border-white hover:bg-white/5 hover:shadow-glow-md' 
-                  : 'border-gray-400 text-black hover:border-black hover:bg-black/5'
+                  ? 'border-gray-500 text-white hover:border-white hover:bg-white/5 hover:shadow-glow-md focus:ring-white focus:ring-offset-black' 
+                  : 'border-gray-400 text-black hover:border-black hover:bg-black/5 focus:ring-black focus:ring-offset-white'
               }`}
             >
               <Mail size={18} className="mr-2 sm:mr-3 transition-transform group-hover:scale-110" />

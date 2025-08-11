@@ -87,7 +87,7 @@ const Education = ({ darkMode }) => {
                   {/* Content Card */}
                   <motion.div
                     whileHover={{ scale: 1.02, y: -5 }}
-                    className={`w-full md:w-5/12 ml-16 md:ml-0 p-6 rounded-xl ${
+                    className={`w-full md:w-5/12 ml-16 md:ml-0 p-4 sm:p-5 lg:p-6 rounded-lg sm:rounded-xl ${
                       darkMode ? 'bg-white/5 border border-gray-700' : 'bg-black/5 border border-gray-200'
                     } backdrop-blur-sm shadow-lg`}
                   >

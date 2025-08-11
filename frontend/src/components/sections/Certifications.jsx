@@ -73,7 +73,7 @@ const Certifications = ({ darkMode }) => {
           {/* Certifications Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
           >
             {Array.isArray(certifications) && certifications.length > 0 ? (
               certifications.map((cert, index) => (

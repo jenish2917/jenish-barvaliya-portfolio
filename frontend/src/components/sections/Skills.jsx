@@ -102,13 +102,13 @@ const Skills = ({ darkMode }) => {
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
                   {categorySkills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
                       variants={skillVariants}
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className={`group p-4 sm:p-6 rounded-xl ${
+                      className={`group p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl ${
                         darkMode ? 'bg-white/5 border border-gray-700 hover:border-gray-600' : 'bg-black/5 border border-gray-200 hover:border-gray-300'
                       } backdrop-blur-sm transition-all duration-300`}
                     >

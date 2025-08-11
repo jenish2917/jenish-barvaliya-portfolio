@@ -181,7 +181,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-xl transition-all duration-300 ${
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              className={`p-2 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 ${
                 darkMode ? 'text-white hover:bg-white/10' : 'text-black hover:bg-black/10'
               }`}
             >
@@ -204,11 +207,13 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           opacity: isOpen ? 1 : 0
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
+        id="mobile-menu"
+        aria-hidden={!isOpen}
         className={`md:hidden overflow-hidden ${
           darkMode ? 'bg-black/95' : 'bg-white/95'
         } backdrop-blur-xl border-t ${darkMode ? 'border-white/10' : 'border-black/10'}`}
       >
-        <div className="px-6 pt-4 pb-6 space-y-2">
+        <nav className="px-4 sm:px-6 pt-4 pb-6 space-y-1" role="navigation" aria-label="Mobile navigation">
           {navItems.map((item, index) => (
             <motion.button
               key={item.id}
@@ -220,7 +225,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               transition={{ delay: index * 0.05, duration: 0.3 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection(item.id)}
-              className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
+              className={`block w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 ${
                 activeSection === item.id
                   ? `${darkMode ? 'text-white bg-white/10' : 'text-black bg-black/10'}`
                   : `${darkMode ? 'text-gray-300 hover:text-white hover:bg-white/5' : 'text-gray-600 hover:text-black hover:bg-black/5'}`
@@ -238,7 +243,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               y: isOpen ? 0 : 20 
             }}
             transition={{ delay: 0.2, duration: 0.3 }}
-            className="flex items-center justify-center space-x-6 pt-6 border-t border-white/10"
+            className="flex items-center justify-center space-x-4 sm:space-x-6 pt-4 sm:pt-6 border-t border-white/10"
           >
             {[
               { icon: Github, href: "https://github.com/jenish2917" },
@@ -252,7 +257,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 href={href}
                 target={href.startsWith('mailto:') ? undefined : "_blank"}
                 rel={href.startsWith('mailto:') ? undefined : "noopener noreferrer"}
-                className={`p-3 rounded-xl transition-all duration-300 ${
+                aria-label={`Visit ${href.includes('github') ? 'GitHub' : href.includes('linkedin') ? 'LinkedIn' : 'Email'} profile`}
+                className={`p-2 sm:p-3 rounded-lg sm:rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 ${
                   darkMode ? 'text-gray-300 hover:text-white hover:bg-white/10' : 'text-gray-600 hover:text-black hover:bg-black/10'
                 }`}
               >
@@ -260,7 +266,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               </motion.a>
             ))}
           </motion.div>
-        </div>
+        </nav>
       </motion.div>
     </motion.nav>
   )

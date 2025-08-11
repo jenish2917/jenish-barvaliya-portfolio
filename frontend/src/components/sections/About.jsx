@@ -158,7 +158,7 @@ const About = ({ darkMode }) => {
               </div>
 
               {/* Enhanced Skills Grid */}
-              <motion.div variants={cardVariants} className="grid grid-cols-2 gap-3 sm:gap-4">
+              <motion.div variants={cardVariants} className="grid grid-cols-2 gap-2 sm:gap-3">
                 {[
                   { icon: Target, label: "Problem Solver", value: "100%" },
                   { icon: Zap, label: "Fast Learner", value: "95%" },
@@ -171,9 +171,9 @@ const About = ({ darkMode }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 1 + index * 0.1, duration: 0.6 }}
-                    className={`p-3 sm:p-5 rounded-2xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group`}
+                    className={`p-3 sm:p-4 rounded-xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group`}
                   >
-                    <skill.icon size={20} className={`sm:size-24 ${darkMode ? 'text-white' : 'text-black'} mb-2 sm:mb-3 group-hover:scale-110 transition-transform`} />
+                    <skill.icon size={20} className={`sm:size-16 ${darkMode ? 'text-white' : 'text-black'} mb-2 group-hover:scale-110 transition-transform`} />
                     <h4 className={`text-xs sm:text-sm font-semibold ${darkMode ? 'text-white' : 'text-black'} mb-1`}>
                       {skill.label}
                     </h4>
@@ -190,7 +190,7 @@ const About = ({ darkMode }) => {
               {/* Enhanced Summary */}
               <motion.div
                 variants={cardVariants}
-                className={`p-6 sm:p-8 rounded-3xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10`}
+                className={`p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10`}
               >
                 <h3 className={`text-xl sm:text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3`}>
                   <User className={darkMode ? "text-white" : "text-black"} size={24} />

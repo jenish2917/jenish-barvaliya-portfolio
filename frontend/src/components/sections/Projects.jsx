@@ -73,7 +73,7 @@ const Projects = ({ darkMode }) => {
           {/* Projects Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
           >
             {Array.isArray(projects) && projects.length > 0 ? (
               projects.map((project, index) => (
@@ -83,8 +83,17 @@ const Projects = ({ darkMode }) => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className={`group relative overflow-hidden rounded-xl ${
                   darkMode ? 'bg-white/5 border border-gray-700' : 'bg-black/5 border border-gray-200'
-                } backdrop-blur-sm shadow-lg cursor-pointer`}
+                } backdrop-blur-sm shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/20`}
                 onClick={() => setSelectedProject(project)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedProject(project);
+                  }
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label={`View details for ${project.title} project`}
               >
                 {/* Project Image */}
                 <div className="relative h-40 sm:h-48 overflow-hidden">
@@ -231,14 +240,14 @@ const Projects = ({ darkMode }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80"
+            className="fixed inset-0 z-[60] flex items-center justify-center p-2 sm:p-4 bg-black/80"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className={`relative max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-xl ${
+              className={`relative max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto rounded-lg sm:rounded-xl ${
                 darkMode ? 'bg-gray-900 border border-gray-700' : 'bg-white border border-gray-200'
               } shadow-2xl`}
               onClick={(e) => e.stopPropagation()}
@@ -254,11 +263,11 @@ const Projects = ({ darkMode }) => {
               </button>
 
               {/* Modal Content */}
-              <div className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-4 sm:p-6 lg:p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                   {/* Project Image */}
                   <div className="space-y-4">
-                    <div className={`h-64 rounded-lg ${
+                    <div className={`h-48 sm:h-64 rounded-lg ${
                       darkMode ? 'bg-gradient-to-br from-gray-800 to-gray-900' : 'bg-gradient-to-br from-gray-100 to-gray-200'
                     } flex items-center justify-center`}>
                       <div className={`text-6xl ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>

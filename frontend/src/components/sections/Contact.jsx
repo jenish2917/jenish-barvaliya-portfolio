@@ -184,7 +184,7 @@ const Contact = ({ darkMode }) => {
             <div className={`w-20 h-1 ${darkMode ? 'bg-white' : 'bg-black'} mx-auto`} />
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div>
@@ -286,15 +286,15 @@ const Contact = ({ darkMode }) => {
 
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className={`p-8 rounded-xl ${
+              <div className={`p-6 sm:p-8 rounded-xl ${
                 darkMode ? 'bg-white/5 border border-gray-700' : 'bg-black/5 border border-gray-200'
               } backdrop-blur-sm`}>
                 <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-6`}>
                   Send Message
                 </h3>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className={`block text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
                         Name *
