@@ -174,12 +174,12 @@ const Skills = ({ darkMode }) => {
             </h3>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-6 max-w-3xl mx-auto`}>
               I'm constantly expanding my skill set and staying updated with the latest technologies. 
-              Currently exploring advanced topics in Deep Learning, MLOps, and Cloud Computing.
+              Currently learning PyTorch for deep learning and LangChain for AI applications.
             </p>
             
             {/* Current Learning */}
             <div className="flex flex-wrap justify-center gap-3">
-              {['PyTorch Lightning', 'Kubernetes', 'GraphQL', 'Rust', 'WebAssembly'].map((tech, index) => (
+              {['PyTorch', 'LangChain'].map((tech, index) => (
                 <motion.span
                   key={tech}
                   initial={{ opacity: 0, scale: 0 }}
