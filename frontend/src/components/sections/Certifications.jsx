@@ -195,23 +195,6 @@ const Certifications = ({ darkMode }) => {
               I'm committed to staying current with industry trends and continuously expanding my knowledge through 
               professional certifications and hands-on learning.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {['AWS Solutions Architect', 'Google Cloud ML Engineer', 'Microsoft Azure AI'].map((upcoming, index) => (
-                <motion.span
-                  key={upcoming}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ delay: 2 + index * 0.1, duration: 0.6 }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${
-                    darkMode 
-                      ? darkMode ? 'bg-white/20 text-white border border-white/30' : 'bg-black/20 text-black border border-black/30'
-                      : darkMode ? 'bg-white/20 text-white border border-white/30' : 'bg-black/20 text-black border border-black/30'
-                  }`}
-                >
-                  ○ {upcoming}
-                </motion.span>
-              ))}
-            </div>
           </motion.div>
         </motion.div>
       </div>

@@ -50,8 +50,8 @@ const About = ({ darkMode }) => {
   ]
 
   return (
-    <section id="about" className="py-16 sm:py-24 relative pt-20 sm:pt-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+    <section id="about" className="py-16 sm:py-24 relative pt-20 sm:pt-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 overflow-hidden">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -171,13 +171,13 @@ const About = ({ darkMode }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 1 + index * 0.1, duration: 0.6 }}
-                    className={`p-3 sm:p-4 rounded-xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group`}
+                    className={`p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group overflow-hidden`}
                   >
-                    <skill.icon size={20} className={`sm:size-16 ${darkMode ? 'text-white' : 'text-black'} mb-2 group-hover:scale-110 transition-transform`} />
-                    <h4 className={`text-xs sm:text-sm font-semibold ${darkMode ? 'text-white' : 'text-black'} mb-1`}>
+                    <skill.icon size={16} className={`sm:size-14 lg:size-16 ${darkMode ? 'text-white' : 'text-black'} mb-1 sm:mb-2 group-hover:scale-110 transition-transform mx-auto`} />
+                    <h4 className={`text-xs sm:text-sm font-semibold ${darkMode ? 'text-white' : 'text-black'} mb-1 text-center leading-tight break-words`}>
                       {skill.label}
                     </h4>
-                    <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'} text-center`}>
                       {skill.value}
                     </p>
                   </motion.div>
@@ -196,14 +196,14 @@ const About = ({ darkMode }) => {
                   <User className={darkMode ? "text-white" : "text-black"} size={24} />
                   My Story
                 </h3>
-                <p className={`text-sm sm:text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4 sm:mb-6`}>
+                <p className={`text-sm sm:text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4 sm:mb-6 break-words overflow-hidden`}>
                   {about.summary}
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className={`p-4 rounded-2xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} border-l-4 border-blue-400`}
                 >
-                  <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} italic`}>
+                  <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} italic break-words overflow-hidden`}>
                     "{about.vision}"
                   </p>
                 </motion.div>
@@ -226,13 +226,13 @@ const About = ({ darkMode }) => {
                       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                       transition={{ delay: 1.5 + index * 0.1, duration: 0.6 }}
                       whileHover={{ x: 10, scale: 1.02 }}
-                      className="flex items-start gap-4 group"
+                      className="flex items-start gap-2 sm:gap-4 group overflow-hidden"
                     >
                       <motion.div
                         whileHover={{ rotate: 90 }}
                         className={`mt-1 w-2 h-2 rounded-full ${darkMode ? 'bg-white' : 'bg-black'} flex-shrink-0 group-hover:scale-150 transition-all duration-300`}
                       />
-                      <p className={`text-base ${darkMode ? 'text-gray-300 group-hover:text-white' : 'text-gray-700 group-hover:text-black'} leading-relaxed transition-colors`}>
+                      <p className={`text-sm sm:text-base ${darkMode ? 'text-gray-300 group-hover:text-white' : 'text-gray-700 group-hover:text-black'} leading-relaxed transition-colors break-words overflow-hidden`}>
                         {highlight}
                       </p>
                     </motion.div>
@@ -249,16 +249,17 @@ const About = ({ darkMode }) => {
                   href="#contact"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 ${
+                  className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold transition-all duration-300 text-sm sm:text-base ${
                     darkMode 
                       ? 'bg-white text-black hover:bg-gray-200 shadow-lg hover:shadow-xl' 
                       : 'bg-black text-white hover:bg-gray-800 shadow-lg hover:shadow-xl'
                   }`}
                 >
-                  <span>Let's Connect</span>
+                  <span className="whitespace-nowrap">Let's Connect</span>
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
+                    className="text-sm sm:text-base"
                   >
                     →
                   </motion.div>
