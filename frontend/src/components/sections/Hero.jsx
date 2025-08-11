@@ -38,7 +38,7 @@ const Hero = ({ darkMode }) => {
   const typewriterText = "Professional Machine Learning & AI Engineer"
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-0">
       {/* Simplified background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle gradient overlay */}
@@ -50,7 +50,7 @@ const Hero = ({ darkMode }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-12"
+          className="space-y-8 sm:space-y-12"
         >
           {/* Greeting with enhanced styling */}
           <motion.div variants={itemVariants} className="space-y-2">
@@ -97,12 +97,12 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced animated title */}
           <motion.div 
             variants={itemVariants} 
-            className="h-20 flex items-center justify-center"
+            className="h-16 sm:h-20 flex items-center justify-center"
           >
             <motion.h2
-              className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl ${
+              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
-              } font-mono max-w-5xl font-medium`}
+              } font-mono max-w-5xl font-medium px-4 text-center`}
             >
               <motion.span
                 initial={{ width: 0 }}
@@ -142,7 +142,7 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced action buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 sm:pt-12 px-4"
+            className="flex flex-col gap-3 sm:flex-row sm:gap-6 justify-center items-center pt-6 sm:pt-12 px-4 max-w-md sm:max-w-none mx-auto"
           >
             <motion.a
               whileHover={{ 
