@@ -38,14 +38,14 @@ const Hero = ({ darkMode }) => {
   const typewriterText = "AI/ML Engineer & Developer"
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-0">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 sm:px-4 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-0">
       {/* Simplified background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/[0.005] to-transparent" />
       </div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10 w-full">
+      <div className="max-w-6xl mx-auto text-center relative z-10 w-full min-w-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -97,18 +97,19 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced animated title */}
           <motion.div 
             variants={itemVariants} 
-            className="h-16 sm:h-20 flex items-center justify-center"
+            className="h-16 sm:h-20 flex items-center justify-center w-full"
           >
             <motion.h2
               className={`text-base sm:text-lg md:text-xl lg:text-2xl ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
-              } font-mono max-w-full font-medium px-4 text-center leading-tight`}
+              } font-mono w-full font-medium px-2 sm:px-4 text-center leading-tight`}
             >
               <motion.span
                 initial={{ width: 0 }}
-                animate={{ width: "100%" }}
+                animate={{ width: "auto" }}
                 transition={{ delay: 1.5, duration: 3, ease: "easeInOut" }}
-                className="inline-block overflow-hidden whitespace-nowrap"
+                className="inline-block whitespace-nowrap"
+                style={{ minWidth: "280px" }}
               >
                 <motion.span
                   initial={{ opacity: 0 }}
