@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ['class'], // keep your current behavior
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,18 +7,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Harbor Color System
-        bg: 'rgb(var(--color-bg) / <alpha-value>)',
-        surface: 'rgb(var(--color-surface) / <alpha-value>)',
-        surface2: 'rgb(var(--color-surface-2) / <alpha-value>)',
-        accent: 'rgb(var(--color-accent) / <alpha-value>)',
-        text: 'rgb(var(--color-text) / <alpha-value>)',
-        muted: 'rgb(var(--color-muted) / <alpha-value>)',
-        border: 'rgb(var(--color-border) / <alpha-value>)',
-        ring: 'rgb(var(--color-ring) / <alpha-value>)',
-        glow: 'rgb(var(--color-glow) / <alpha-value>)',
-        
-        // Legacy colors for backwards compatibility
         primary: {
           black: '#000000',
           white: '#ffffff',
@@ -163,12 +150,6 @@ export default {
         'glow-lg': '0 0 30px rgba(255, 255, 255, 0.2)',
         'elegant': '0 4px 20px rgba(0, 0, 0, 0.15)',
         'elegant-hover': '0 8px 30px rgba(0, 0, 0, 0.2)',
-        // Harbor palette shadows
-        'halo': '0 0 0 4px rgb(var(--color-ring) / 0.15)',
-        'glow': '0 10px 30px -10px rgb(var(--color-glow) / 0.25)',
-      },
-      ringColor: {
-        DEFAULT: 'rgb(var(--color-ring) / 1)',
       },
       borderRadius: {
         'xl': '0.75rem',

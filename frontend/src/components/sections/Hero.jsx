@@ -59,7 +59,7 @@ const Hero = ({ darkMode }) => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-mono ${
-                darkMode ? 'bg-surface/60 text-muted border border-border/60' : 'bg-black/5 text-gray-600 border border-black/10'
+                darkMode ? 'bg-white/5 text-gray-300 border border-white/10' : 'bg-black/5 text-gray-600 border border-black/10'
               } backdrop-blur-sm`}
             >
               Hello, I'm
@@ -70,7 +70,7 @@ const Hero = ({ darkMode }) => {
           <motion.h1
             variants={itemVariants}
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black ${
-              darkMode ? 'text-text' : 'text-black'
+              darkMode ? 'text-white' : 'text-black'
             } tracking-tight leading-none`}
           >
             <span className="relative inline-block">
@@ -101,7 +101,7 @@ const Hero = ({ darkMode }) => {
           >
             <motion.h2
               className={`text-base sm:text-lg md:text-xl lg:text-2xl ${
-                darkMode ? 'text-muted/90' : 'text-gray-600'
+                darkMode ? 'text-gray-300' : 'text-gray-600'
               } font-mono w-full font-medium px-2 sm:px-4 text-center leading-tight`}
             >
               <motion.span
@@ -127,15 +127,15 @@ const Hero = ({ darkMode }) => {
           <motion.p
             variants={itemVariants}
             className={`text-sm sm:text-base md:text-lg ${
-              darkMode ? 'text-muted/90' : 'text-gray-500'
+              darkMode ? 'text-gray-400' : 'text-gray-500'
             } max-w-3xl mx-auto leading-relaxed font-light px-6 text-center`}
           >
             Passionate Information Technology student specializing in{' '}
-            <span className={`font-semibold ${darkMode ? 'text-text' : 'text-gray-700'}`}>
+            <span className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
               Machine Learning
             </span>
             {', '}
-            <span className={`font-semibold ${darkMode ? 'text-text' : 'text-gray-700'}`}>
+            <span className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
               Artificial Intelligence
             </span>
             {', and modern web technologies. Building innovative solutions that bridge the gap between AI research and real-world applications.'}
@@ -155,9 +155,9 @@ const Hero = ({ darkMode }) => {
               href={personalInfo.resume}
               download
               aria-label="Download resume PDF"
-              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 darkMode 
-                  ? 'bg-accent text-bg hover:bg-accent/90 focus-visible:ring-offset-black shadow-glow' 
+                  ? 'bg-white text-black hover:bg-gray-100 focus:ring-white focus:ring-offset-black' 
                   : 'bg-black text-white hover:bg-gray-900 focus:ring-black focus:ring-offset-white'
               } shadow-lg hover:shadow-xl`}
             >
@@ -176,9 +176,9 @@ const Hero = ({ darkMode }) => {
               whileTap={{ scale: 0.95 }}
               href={`mailto:${personalInfo.email}`}
               aria-label="Send email to contact"
-              className={`group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+              className={`group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 darkMode 
-                  ? 'border-border/60 text-text hover:border-accent hover:bg-surface/50 hover:shadow-glow focus-visible:ring-offset-black' 
+                  ? 'border-gray-500 text-white hover:border-white hover:bg-white/5 hover:shadow-glow-md focus:ring-white focus:ring-offset-black' 
                   : 'border-gray-400 text-black hover:border-black hover:bg-black/5 focus:ring-black focus:ring-offset-white'
               }`}
             >
