@@ -34,7 +34,7 @@ function App() {
   }
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} transition-colors duration-500`}>
+    <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'theme-dark bg-bg text-text' : 'theme-light bg-bg text-text'}`}>
       <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingScreen key="loading" />
