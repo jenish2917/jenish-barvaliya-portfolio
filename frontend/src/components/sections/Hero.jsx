@@ -147,7 +147,9 @@ const Hero = ({ darkMode }) => {
               href={personalInfo.resume}
               download
               aria-label="Download resume PDF"
-              className="group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent text-bg hover:bg-accent/90 shadow-glow hover:shadow-halo"
+              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent shadow-glow hover:shadow-halo hover:bg-accent/90 ${
+                darkMode ? 'text-white' : 'text-black'
+              }`}
             >
               {/* Button shine effect */}
               <div className="absolute inset-0 -top-1 -left-1 bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
