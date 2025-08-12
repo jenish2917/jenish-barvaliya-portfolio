@@ -71,15 +71,15 @@ const Skills = ({ darkMode }) => {
           <motion.div variants={itemVariants} className="text-center">
             <motion.span
               className={`inline-block px-4 py-2 rounded-full text-sm font-mono ${
-                darkMode ? 'bg-white/10 text-gray-300' : 'bg-black/10 text-gray-600'
+                darkMode ? 'bg-surface/60 text-muted border border-border/60' : 'bg-black/10 text-gray-600'
               } mb-4`}
             >
               Technical Expertise
             </motion.span>
-            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 sm:mb-6`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold ${darkMode ? 'text-text' : 'text-black'} mb-4 sm:mb-6`}>
               Skills & Technologies
             </h2>
-            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto mb-4 sm:mb-6 px-6 text-center leading-relaxed`}>
+            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-muted/90' : 'text-gray-600'} max-w-3xl mx-auto mb-4 sm:mb-6 px-6 text-center leading-relaxed`}>
               A comprehensive overview of my technical skills across various domains including AI/ML, web development, and data science.
             </p>
             <div className={`w-20 h-1 ${darkMode ? 'bg-white' : 'bg-black'} mx-auto`} />
@@ -109,7 +109,7 @@ const Skills = ({ darkMode }) => {
                       variants={skillVariants}
                       whileHover={{ scale: 1.05, y: -5 }}
                       className={`group p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl ${
-                        darkMode ? 'bg-white/5 border border-gray-700 hover:border-gray-600' : 'bg-black/5 border border-gray-200 hover:border-gray-300'
+                        darkMode ? 'bg-surface/60 border border-border/60 hover:border-accent/40' : 'bg-black/5 border border-gray-200 hover:border-gray-300'
                       } backdrop-blur-sm transition-all duration-300`}
                     >
                       {/* Skill Header */}

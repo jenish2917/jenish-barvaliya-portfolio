@@ -43,10 +43,10 @@ const About = ({ darkMode }) => {
   }
 
   const highlightIcons = [
-    { icon: Brain, color: darkMode ? "text-white" : "text-black", bg: darkMode ? "bg-white/10" : "bg-black/10", label: "AI/ML" },
-    { icon: Code, color: darkMode ? "text-white" : "text-black", bg: darkMode ? "bg-white/10" : "bg-black/10", label: "Development" },
-    { icon: Database, color: darkMode ? "text-white" : "text-black", bg: darkMode ? "bg-white/10" : "bg-black/10", label: "Data Science" },
-    { icon: Lightbulb, color: darkMode ? "text-white" : "text-black", bg: darkMode ? "bg-white/10" : "bg-black/10", label: "Innovation" }
+    { icon: Brain, color: darkMode ? "text-accent" : "text-black", bg: darkMode ? "bg-surface/60" : "bg-black/10", label: "AI/ML" },
+    { icon: Code, color: darkMode ? "text-accent" : "text-black", bg: darkMode ? "bg-surface/60" : "bg-black/10", label: "Development" },
+    { icon: Database, color: darkMode ? "text-accent" : "text-black", bg: darkMode ? "bg-surface/60" : "bg-black/10", label: "Data Science" },
+    { icon: Lightbulb, color: darkMode ? "text-accent" : "text-black", bg: darkMode ? "bg-surface/60" : "bg-black/10", label: "Innovation" }
   ]
 
   return (
@@ -63,13 +63,13 @@ const About = ({ darkMode }) => {
           <motion.div variants={itemVariants} className="text-center">
             <motion.span
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-mono ${
-                darkMode ? 'bg-white/10 text-gray-300' : 'bg-black/10 text-gray-600'
-              } mb-6 backdrop-blur-sm border border-white/10`}
+                darkMode ? 'bg-surface/60 text-muted border border-border/60' : 'bg-black/10 text-gray-600'
+              } mb-6 backdrop-blur-sm`}
             >
               <User size={16} />
               About Me
             </motion.span>
-            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-4 sm:mb-6`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${darkMode ? 'text-text' : 'text-black'} mb-4 sm:mb-6`}>
               Who I{' '}
               <span className="relative">
                 Am
@@ -77,11 +77,11 @@ const About = ({ darkMode }) => {
                   initial={{ width: 0 }}
                   animate={inView ? { width: "100%" } : { width: 0 }}
                   transition={{ delay: 1, duration: 0.8 }}
-                  className={`absolute -bottom-2 left-0 h-1 ${darkMode ? 'bg-white' : 'bg-black'} rounded-full`}
+                  className={`absolute -bottom-2 left-0 h-1 ${darkMode ? 'bg-accent' : 'bg-black'} rounded-full`}
                 />
               </span>
             </h2>
-            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed px-6 text-center`}>
+            <p className={`text-sm sm:text-base md:text-lg ${darkMode ? 'text-muted/90' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed px-6 text-center`}>
               Passionate developer crafting intelligent solutions at the intersection of AI and technology
             </p>
           </motion.div>
@@ -171,10 +171,10 @@ const About = ({ darkMode }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 1 + index * 0.1, duration: 0.6 }}
-                    className={`p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group overflow-hidden`}
+                    className={`p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl ${darkMode ? 'bg-surface/60' : 'bg-black/5'} backdrop-blur-sm border border-border/60 hover:border-accent/40 transition-all duration-300 group overflow-hidden`}
                   >
-                    <skill.icon size={16} className={`sm:size-14 lg:size-16 ${darkMode ? 'text-white' : 'text-black'} mb-1 sm:mb-2 group-hover:scale-110 transition-transform mx-auto`} />
-                    <h4 className={`text-xs sm:text-sm font-semibold ${darkMode ? 'text-white' : 'text-black'} mb-1 text-center leading-tight break-words`}>
+                    <skill.icon size={16} className={`sm:size-14 lg:size-16 ${darkMode ? 'text-accent' : 'text-black'} mb-1 sm:mb-2 group-hover:scale-110 transition-transform mx-auto`} />
+                    <h4 className={`text-xs sm:text-sm font-semibold ${darkMode ? 'text-text' : 'text-black'} mb-1 text-center leading-tight break-words`}>
                       {skill.label}
                     </h4>
                     <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'} text-center`}>
@@ -190,10 +190,10 @@ const About = ({ darkMode }) => {
               {/* Enhanced Summary */}
               <motion.div
                 variants={cardVariants}
-                className={`p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10`}
+                className={`p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl ${darkMode ? 'bg-surface/60' : 'bg-black/5'} backdrop-blur-sm border border-border/60`}
               >
-                <h3 className={`text-xl sm:text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3`}>
-                  <User className={darkMode ? "text-white" : "text-black"} size={24} />
+                <h3 className={`text-xl sm:text-2xl font-bold ${darkMode ? 'text-text' : 'text-black'} mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3`}>
+                  <User className={darkMode ? "text-accent" : "text-black"} size={24} />
                   My Story
                 </h3>
                 <p className={`text-sm sm:text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4 sm:mb-6 break-words overflow-hidden`}>
@@ -201,7 +201,7 @@ const About = ({ darkMode }) => {
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className={`p-4 rounded-2xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} border-l-4 border-blue-400`}
+                  className={`p-4 rounded-2xl ${darkMode ? 'bg-surface/60' : 'bg-black/5'} border-l-4 border-accent`}
                 >
                   <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} italic break-words overflow-hidden`}>
                     "{about.vision}"
@@ -212,10 +212,10 @@ const About = ({ darkMode }) => {
               {/* Enhanced Highlights */}
               <motion.div
                 variants={cardVariants}
-                className={`p-8 rounded-3xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-white/10`}
+                className={`p-8 rounded-3xl ${darkMode ? 'bg-surface/60' : 'bg-black/5'} backdrop-blur-sm border border-border/60`}
               >
-                <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mb-6 flex items-center gap-3`}>
-                  <Award className={darkMode ? "text-white" : "text-black"} size={28} />
+                <h3 className={`text-2xl font-bold ${darkMode ? 'text-text' : 'text-black'} mb-6 flex items-center gap-3`}>
+                  <Award className={darkMode ? "text-accent" : "text-black"} size={28} />
                   Key Achievements
                 </h3>
                 <div className="space-y-4">
@@ -249,9 +249,9 @@ const About = ({ darkMode }) => {
                   href="#contact"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold transition-all duration-300 text-sm sm:text-base ${
+                  className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold transition-all duration-300 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                     darkMode 
-                      ? 'bg-white text-black hover:bg-gray-200 shadow-lg hover:shadow-xl' 
+                      ? 'bg-accent text-bg hover:bg-accent/90 shadow-glow hover:shadow-halo focus-visible:ring-offset-black' 
                       : 'bg-black text-white hover:bg-gray-800 shadow-lg hover:shadow-xl'
                   }`}
                 >
