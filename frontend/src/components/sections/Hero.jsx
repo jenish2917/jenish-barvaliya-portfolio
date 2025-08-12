@@ -58,7 +58,9 @@ const Hero = ({ darkMode }) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-mono bg-surface/60 text-muted border border-border/60 backdrop-blur-sm"
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-mono ${
+                darkMode ? 'bg-surface/60 text-muted border border-border/60' : 'bg-black/5 text-gray-600 border border-black/10'
+              } backdrop-blur-sm`}
             >
               Hello, I'm
             </motion.span>
@@ -67,7 +69,9 @@ const Hero = ({ darkMode }) => {
           {/* Name with enhanced typography */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-text tracking-tight leading-none"
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black ${
+              darkMode ? 'text-text' : 'text-black'
+            } tracking-tight leading-none`}
           >
             <span className="relative inline-block">
               {personalInfo.name.split(' ').map((word, index) => (
@@ -96,7 +100,9 @@ const Hero = ({ darkMode }) => {
             className="h-16 sm:h-20 flex items-center justify-center w-full"
           >
             <motion.h2
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted/90 font-mono w-full font-medium px-2 sm:px-4 text-center leading-tight"
+              className={`text-base sm:text-lg md:text-xl lg:text-2xl ${
+                darkMode ? 'text-muted/90' : 'text-gray-600'
+              } font-mono w-full font-medium px-2 sm:px-4 text-center leading-tight`}
             >
               <motion.span
                 initial={{ width: 0 }}
@@ -120,14 +126,16 @@ const Hero = ({ darkMode }) => {
           {/* Enhanced subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-base md:text-lg text-muted/90 max-w-3xl mx-auto leading-relaxed font-light px-6 text-center"
+            className={`text-sm sm:text-base md:text-lg ${
+              darkMode ? 'text-muted/90' : 'text-gray-500'
+            } max-w-3xl mx-auto leading-relaxed font-light px-6 text-center`}
           >
             Passionate Information Technology student specializing in{' '}
-            <span className="font-semibold text-text">
+            <span className={`font-semibold ${darkMode ? 'text-text' : 'text-gray-700'}`}>
               Machine Learning
             </span>
             {', '}
-            <span className="font-semibold text-text">
+            <span className={`font-semibold ${darkMode ? 'text-text' : 'text-gray-700'}`}>
               Artificial Intelligence
             </span>
             {', and modern web technologies. Building innovative solutions that bridge the gap between AI research and real-world applications.'}
@@ -147,7 +155,11 @@ const Hero = ({ darkMode }) => {
               href={personalInfo.resume}
               download
               aria-label="Download resume PDF"
-              className="group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent text-bg hover:bg-accent/90 shadow-glow hover:shadow-halo"
+              className={`group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                darkMode 
+                  ? 'bg-accent text-bg hover:bg-accent/90 focus-visible:ring-offset-black shadow-glow' 
+                  : 'bg-black text-white hover:bg-gray-900 focus:ring-black focus:ring-offset-white'
+              } shadow-lg hover:shadow-xl`}
             >
               {/* Button shine effect */}
               <div className="absolute inset-0 -top-1 -left-1 bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
@@ -164,7 +176,11 @@ const Hero = ({ darkMode }) => {
               whileTap={{ scale: 0.95 }}
               href={`mailto:${personalInfo.email}`}
               aria-label="Send email to contact"
-              className="group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg border-border/60 text-text hover:border-accent hover:bg-surface/50 hover:shadow-glow"
+              className={`group inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base lg:text-lg border-2 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                darkMode 
+                  ? 'border-border/60 text-text hover:border-accent hover:bg-surface/50 hover:shadow-glow focus-visible:ring-offset-black' 
+                  : 'border-gray-400 text-black hover:border-black hover:bg-black/5 focus:ring-black focus:ring-offset-white'
+              }`}
             >
               <Mail size={18} className="mr-2 sm:mr-3 transition-transform group-hover:scale-110" />
               Contact Me
