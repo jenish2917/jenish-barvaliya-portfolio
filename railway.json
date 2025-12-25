@@ -1,0 +1,8 @@
+{
+  "build": {
+    "command": "cd backend && pip install -r requirements.txt"
+  },
+  "start": {
+    "command": "cd backend && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:$PORT portfolio_backend.wsgi:application"
+  }
+}
