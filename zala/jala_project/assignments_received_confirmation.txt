@@ -1,0 +1,27 @@
+Subject: Assignments received
+
+Dear JALA Academy Team,
+
+I have successfully received and organized the assignments as requested:
+
+1. Programming Language Assignments with Solutions (JAVA, C#, Python)
+2. SQL Queries for JALA Academy Interview
+3. Front End Technologies-PDFs
+4. Selenium assignments, JIRA, TestNG and POM Framework
+5. RESTful web services materials
+6. Additional materials including Data Science assignments
+
+I have organized all materials in a structured project format with separate directories for each category:
+- Programming assignments (Java, Python, C#)
+- SQL assignments
+- Frontend assignments
+- Selenium assignments
+- Cyber Security assignments
+- Data Science assignments
+
+I will begin working on the assignments using one of the requested languages (JAVA, C#, or Python) and will share the solutions via a GitHub repository upon completion.
+
+Thank you for providing these comprehensive materials.
+
+Best regards,
+[Your Name]
